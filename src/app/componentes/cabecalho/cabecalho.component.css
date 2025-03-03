@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    gap: 100px;
+    padding: 10px 25px;
+}
+button{
+    color: #F2F2F2;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+button:hover {
+    color: orange;
+}
+div{
+    display: flex;
+    justify-content: left;
+    flex-direction: row; 
+   
+}

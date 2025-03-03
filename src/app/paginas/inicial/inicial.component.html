@@ -1,0 +1,78 @@
+
+<section >
+    <div>
+        <app-main-container></app-main-container>
+    </div>  
+    <section class="container-estoque-pai">  
+    <form [formGroup]="produtosForm" *ngIf="showForm" [@fadeInOut]>
+        <section class="container" [@fadeInOut]>
+            <h2>Adicionar</h2>
+            <input placeholder="Nome" formControlName="nome">
+            <input placeholder="Quantidade" formControlName="quantidade">
+            <input placeholder="Valor" formControlName ="valor">
+            <input type="date" placeholder="Data" formControlName="data">
+            <button (click)="enviarProduto()">Adicionar ao estoque</button>
+        </section>
+    </form>
+    <form [formGroup]="produtosForm" *ngIf="formAtualizar" [@fadeInOut]>
+        <section class="container" [@fadeInOut]>
+            <h2>Atualizar</h2>
+            <input placeholder="Id" formControlName="id">
+            <input placeholder="Nome" formControlName="nome">
+            <input placeholder="Quantidade" formControlName="quantidade">
+            <input placeholder="Valor" formControlName ="valor">
+            <input type="date" placeholder="Data" formControlName="data">
+            <button (click)="atualizarEstoque()">Atualizar estoque</button>
+        </section>
+    </form>
+    <form [formGroup]="produtosForm" *ngIf="formRemove" [@fadeInOut]>
+        <section class="container" [@fadeInOut]>
+            <h2>Remover</h2>
+            <input placeholder="Id" formControlName="id">
+            <button (click)="removerEstoque()">Remover estoque</button>
+        </section>
+    </form>
+    <div class="dashboard" [chart]="chart">
+    </div>
+</section>
+<section class="conjunto">   
+<section class="container-estoque" >
+        <ul>
+        <label>ID</label>
+        @for(alimento of listaEstoque;track alimento){
+            <li>{{alimento.id}}</li>
+        }
+       </ul>
+       <ul>
+        <label>ALIMENTO</label>
+        @for(alimento of listaEstoque;track alimento){
+            <li>{{alimento.nome}}</li>
+        }
+       </ul>
+        <ul>
+        <label>KL</label>
+        @for(alimento of listaEstoque;track alimento){
+            <li>{{alimento.quantidade}}</li>
+        }
+       </ul>
+       <ul>
+        <label>PREÇO</label>
+        @for(alimento of listaEstoque;track alimento){
+            <li>{{alimento.valor}}</li>
+        }
+       </ul>
+       <ul>
+        <label>DATA</label>
+        @for(alimento of listaEstoque;track alimento){
+            <li>{{alimento.data}}</li>
+        }
+       </ul>
+      
+    </section>
+    <div class="quantia-total">
+        <h2>Quantia máxima</h2>
+        <p>{{quantiadeMaxima}} KL</p>
+    </div>
+</section> 
+
+</section>

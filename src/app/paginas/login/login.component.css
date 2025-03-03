@@ -1,0 +1,40 @@
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+    
+}
+div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section input{
+    width: 320px;
+    font-size: 26px;
+    border: 1px solid #113c60;
+    box-shadow: 1px 1px 1px ;
+    
+    
+}
+.botao{
+    display: flex;
+    align-items: center;
+    padding-right: 20%;
+}
+.botao button{
+    border: 1px solid black;
+    color: white;
+    background-color: #113c60;
+    width: 196px;
+    height: 41px;
+    padding: 6px, 12px;
+    border-radius: 4px;
+    border: 1px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}

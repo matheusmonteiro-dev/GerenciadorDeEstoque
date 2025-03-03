@@ -1,0 +1,15 @@
+<app-container>
+    
+    <form [formGroup]="loginForm">
+        <section>
+            <div><h1>LOGIN</h1></div>
+            <input placeholder="email" formControlName="email">
+            <input placeholder="senha" formControlName="senha">
+            <div class="botao">
+                <button (click)="login()">
+                    enviar
+                </button>
+            </div>
+        </section>
+    </form>
+</app-container>
